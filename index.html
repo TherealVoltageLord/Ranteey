@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Ranteey Forex — Elite Trading Terminal</title>
+    <meta name="description" content="Professional forex mentorship and premium trading simulator platform." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="noise"></div>
+
+    <nav>
+        <div class="container nav-inner">
+            <div class="logo">
+                <i class="fas fa-globe-americas logo-icon"></i>
+                <span>RANTEEY FOREX</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#terminal">Terminal</a>
+                <a href="#vault">Vault</a>
+                <a href="#contact">Mentorship</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero (unchanged) -->
+    <section class="hero" id="home">
+        <div class="hero-glow"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title"> Trade With <span>Discipline</span> <br> Not Emotion. </h1>
+            <p class="hero-subtitle"> A cinematic trading mentorship platform engineered for serious forex, gold and crypto traders. Learn structure, psychology, risk management and execution through a premium interactive experience. </p>
+            <div class="hero-actions">
+                <a href="#terminal" class="btn btn-primary"> <i class="fas fa-chart-line"></i> Open Terminal </a>
+                <a href="https://wa.me/2348141916573" class="btn btn-outline"> <i class="fab fa-whatsapp"></i> 1-on-1 Mentorship </a>
+            </div>
+            <div class="stats">
+                <div class="stat-card"><div class="stat-value">$50K</div><div>Demo Capital</div></div>
+                <div class="stat-card"><div class="stat-value">500+</div><div>Traders Mentored</div></div>
+                <div class="stat-card"><div class="stat-value">24/7</div><div>Guidance Access</div></div>
+                <div class="stat-card"><div class="stat-value">4.9★</div><div>Student Rating</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Story (unchanged) -->
+    <section id="story">
+        <div class="container">
+            <div class="glass owner-story">
+                <div class="owner-grid">
+                    <div class="owner-image-wrap">
+                        <div class="owner-glow"></div>
+                        <img class="owner-image" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43d?q=80&w=1200&auto=format&fit=crop" alt="Nnadi Samuel">
+                    </div>
+                    <div>
+                        <span class="story-tag"> Founder Story </span>
+                        <h2 class="section-title owner-title"> The Losses Built The Discipline. </h2>
+                        <p class="owner-text"> I started forex with emotion, hype and greed. I blew accounts repeatedly trying to get rich fast. Every loss exposed another weakness — overtrading, impatience, revenge entries and lack of risk management. </p>
+                        <p class="owner-text"> Instead of quitting, I rebuilt everything from the ground up. I spent years studying structure, psychology, liquidity, price action and execution discipline. </p>
+                        <p class="owner-text"> Today Ranteey Forex exists to help traders avoid the same painful mistakes. No fake luxury. No manipulated screenshots. Just logic, discipline and consistency. </p>
+                        <div class="owner-signature"> — Nnadi Samuel </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Base (unchanged) -->
+    <section id="academy">
+        <div class="container">
+            <h2 class="section-title"> Trading Knowledge Base </h2>
+            <div class="academy-grid">
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>What Is Forex?</h3>
+                    <p> Forex is the global currency exchange market where traders speculate on price movement between currencies. It is the most liquid financial market in the world. </p>
+                    <button class="example-toggle">Show Example</button>
+                    <div class="academy-example">
+                        <p><strong>Example:</strong> When you buy EUR/USD at 1.0800 and sell at 1.0850, you profit from a 50‑pip rise.</p>
+                        <p style="font-size:0.9rem; color:var(--accent)">🌍 24h market – $7.5 trillion traded daily.</p>
+                    </div>
+                </div>
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fas fa-coins"></i></div>
+                    <h3>Pips</h3>
+                    <p> A pip is the smallest movement in most forex pairs. Traders use pips to measure profit, loss and spread. </p>
+                    <button class="example-toggle">Show Calculator</button>
+                    <div class="academy-example">
+                        <label>Pair</label>
+                        <select id="pipPair">
+                            <option value="EURUSD">EUR/USD (0.0001 pip)</option>
+                            <option value="XAUUSD">XAU/USD (0.10 pip)</option>
+                            <option value="BTCUSD">BTC/USD (1 pip)</option>
+                        </select>
+                        <label>Lot Size</label>
+                        <input type="number" id="pipLot" value="1.0" step="0.01">
+                        <p class="calc-result" id="pipResult">1 pip ≈ $10.00</p>
+                        <small style="color:var(--text-dim)">Standard account (1 lot = 100k units)</small>
+                    </div>
+                </div>
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fas fa-shield"></i></div>
+                    <h3>Risk Management</h3>
+                    <p> Serious traders focus more on protecting capital than chasing profits. Most professionals risk only 1-2% per trade. </p>
+                    <button class="example-toggle">Show Calculator</button>
+                    <div class="academy-example">
+                        <label>Account Balance ($)</label>
+                        <input type="number" id="riskBalance" value="50000">
+                        <label>Risk % per trade</label>
+                        <input type="number" id="riskPercent" value="1" step="0.1">
+                        <label>Stop Loss (pips)</label>
+                        <input type="number" id="riskSL" value="30">
+                        <p class="calc-result" id="riskResult">Max position: 1.67 lots</p>
+                        <small style="color:var(--text-dim)">Based on $10/pip (forex)</small>
+                    </div>
+                </div>
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fab fa-bitcoin"></i></div>
+                    <h3>Crypto Trading</h3>
+                    <p> Bitcoin and Ethereum are highly volatile digital assets. Volatility creates opportunity but also higher risk. </p>
+                    <button class="example-toggle">Show Example</button>
+                    <div class="academy-example">
+                        <p><strong>Example:</strong> BTC/USD moves $68,000 → $69,500. That's a $1,500 swing in minutes.</p>
+                        <p style="font-size:0.9rem;">⚠️ Always use smaller position sizes due to extreme volatility.</p>
+                    </div>
+                </div>
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Gold Trading</h3>
+                    <p> Gold reacts strongly to inflation, interest rates and global uncertainty. It is one of the most traded instruments worldwide. </p>
+                    <button class="example-toggle">Show Example</button>
+                    <div class="academy-example">
+                        <p><strong>Example:</strong> XAU/USD jumps from 2320 to 2345 on CPI news – a 250‑pip move.</p>
+                        <p style="font-size:0.9rem;">📊 Often used as a safe‑haven during market turmoil.</p>
+                    </div>
+                </div>
+                <div class="glass academy-card">
+                    <div class="academy-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Trading Psychology</h3>
+                    <p> Fear and greed destroy more traders than bad strategies. Psychology is what separates amateurs from professionals. </p>
+                    <button class="example-toggle">Show Example</button>
+                    <div class="academy-example">
+                        <p><strong>Scenario:</strong> After a losing trade, you immediately open a bigger position to "win it back".</p>
+                        <p style="color:var(--red)">That’s revenge trading — a classic emotional trap.</p>
+                        <p style="margin-top:0.5rem;">✅ Professional response: step away, review the trade, stick to the plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer (unchanged) -->
+    <section id="offers">
+        <div class="container">
+            <h2 class="section-title"> What We Offer </h2>
+            <div class="offer-grid">
+                <div class="glass offer-card premium-offer">
+                    <div class="offer-badge">Most Popular</div>
+                    <h3>1-on-1 Mentorship</h3>
+                    <p> Personalized mentorship focused on psychology, market structure, liquidity, entries, risk management and execution. </p>
+                </div>
+                <div class="glass offer-card">
+                    <h3>Trading PDFs</h3>
+                    <p> Professional guides, risk templates, journaling systems and strategy frameworks. </p>
+                </div>
+                <div class="glass offer-card">
+                    <h3>Practice Terminal</h3>
+                    <p> Simulate trading with realistic price movement, live chart interaction and execution training. </p>
+                </div>
+                <div class="glass offer-card">
+                    <h3>Market Psychology</h3>
+                    <p> Learn emotional discipline, patience and professional trading habits. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elite Practice Terminal (unchanged except logo already fixed) -->
+    <section id="terminal">
+        <div class="container">
+            <h2 class="section-title">Elite Practice Terminal</h2>
+            <div class="glass terminal-toolbar" style="margin-bottom:1rem;">
+                <select id="instrumentSelect">
+                    <option value="XAUUSD">XAU/USD</option>
+                    <option value="EURUSD">EUR/USD</option>
+                    <option value="BTCUSD">BTC/USD</option>
+                </select>
+                <div class="timeframe-group">
+                    <button class="tf-btn active" data-tf="1m">1M</button>
+                    <button class="tf-btn" data-tf="5m">5M</button>
+                    <button class="tf-btn" data-tf="15m">15M</button>
+                    <button class="tf-btn" data-tf="1h">1H</button>
+                </div>
+                <span class="toolbar-divider"></span>
+                <button id="chartTypeBtn" title="Chart type">📊 Candles</button>
+                <button id="addIndicatorBtn">➕ Indicators</button>
+                <span class="shortcut-hint">[B]uy [S]ell [C]lose</span>
+            </div>
+            <div class="glass terminal-toolbar drawing-toolbar" style="margin-bottom:0.5rem;">
+                <button class="draw-btn" data-tool="crosshair">✚ Crosshair</button>
+                <button class="draw-btn" data-tool="hline">— H.Line</button>
+                <button class="draw-btn" data-tool="vline">| V.Line</button>
+                <button class="draw-btn" data-tool="trendline">╱ Trend</button>
+                <button class="draw-btn" data-tool="ray">→ Ray</button>
+                <button class="draw-btn" data-tool="rect">▭ Rect</button>
+                <button class="draw-btn" data-tool="ellipse">○ Ellipse</button>
+                <button class="draw-btn" data-tool="alertline">🔔 Alert</button>
+                <button id="clearDrawingsBtn" class="draw-btn" style="margin-left:auto;">🗑 Clear</button>
+            </div>
+            <div class="terminal-grid">
+                <div style="position:relative;">
+                    <div class="glass chart-container" id="chartContainer">
+                        <div id="chart"></div>
+                        <canvas id="drawingCanvas" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></canvas>
+                        <div class="quick-trade-popup" id="quickTradePopup">
+                            <div class="quick-price" id="quickPrice">0.0000</div>
+                            <div class="quick-actions">
+                                <button class="quick-buy">BUY</button>
+                                <button class="quick-sell">SELL</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass trade-panel">
+                    <div>
+                        <p>Balance</p>
+                        <div class="balance" id="balance">$50,000</div>
+                    </div>
+                    <div class="trade-box">
+                        <div class="input-group">
+                            <label>Lot Size</label>
+                            <input type="number" id="lotSize" value="0.01" step="0.01">
+                        </div>
+                        <div class="input-group">
+                            <label>Stop Loss</label>
+                            <input type="number" id="stopLoss" placeholder="Optional">
+                        </div>
+                        <div class="input-group">
+                            <label>Take Profit</label>
+                            <input type="number" id="takeProfit" placeholder="Optional">
+                        </div>
+                        <button class="risk-calc-btn" id="openRiskCalc">📐 Calculate Lot Size from Risk</button>
+                        <div class="trade-actions">
+                            <button class="buy-btn" id="buyBtn">BUY</button>
+                            <button class="sell-btn" id="sellBtn">SELL</button>
+                        </div>
+                        <button class="close-btn" id="closeBtn" style="display:none;">Close Position</button>
+                        <div style="margin-top:1rem; border-top:1px solid rgba(255,255,255,.08); padding-top:1rem;">
+                            <p style="font-weight:600;">Pending Orders</p>
+                            <div class="input-group">
+                                <label>Type</label>
+                                <select id="pendingType">
+                                    <option value="limit">Limit</option>
+                                    <option value="stop">Stop</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Price</label>
+                                <input type="number" id="pendingPrice" placeholder="Enter price">
+                            </div>
+                            <div class="input-group">
+                                <label>Side</label>
+                                <select id="pendingSide">
+                                    <option value="buy">Buy</option>
+                                    <option value="sell">Sell</option>
+                                </select>
+                            </div>
+                            <button class="risk-calc-btn" id="placePendingBtn">📌 Place Order</button>
+                            <div id="pendingOrdersList" style="font-size:0.85rem; color:var(--text-dim); margin-top:0.5rem;"></div>
+                        </div>
+                    </div>
+                    <div class="trade-box">
+                        <p>Market Session</p>
+                        <h3 id="session">London Session</h3>
+                    </div>
+                    <div class="trade-box">
+                        <p>Current Position</p>
+                        <div id="positionInfo">No open position</div>
+                    </div>
+                    <div class="trade-box">
+                        <p>Trade History</p>
+                        <div id="historyList" style="max-height:150px; overflow-y:auto; font-size:0.85rem; color:var(--text-dim)"></div>
+                    </div>
+                    <div class="trade-box" id="drawingsManager">
+                        <p>Drawings</p>
+                        <div id="drawingsList" style="font-size:0.85rem; color:var(--text-dim); max-height:120px; overflow-y:auto;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Calculator Modal (unchanged) -->
+    <div class="modal-overlay" id="riskModal">
+        <div class="modal">
+            <h3 style="margin-bottom:1rem;">Risk‑Based Lot Calculator</h3>
+            <label>Account Balance</label>
+            <input type="number" id="modalBalance" value="50000">
+            <label>Risk %</label>
+            <input type="number" id="modalRiskPercent" value="1" step="0.1">
+            <label>Stop Loss (pips)</label>
+            <input type="number" id="modalStopPips" value="30">
+            <p style="color:var(--accent); margin:1rem 0;" id="modalResult">Recommended lots: 1.67</p>
+            <button id="applyRiskLot">Apply to Terminal</button>
+            <button style="background:transparent; border:1px solid rgba(255,255,255,.2); margin-top:0.5rem;" id="closeRiskModal">Cancel</button>
+        </div>
+    </div>
+    <div class="modal-overlay" id="indicatorModal">
+        <div class="modal">
+            <h3 style="margin-bottom:1rem;">Add Indicator</h3>
+            <div class="indicator-list">
+                <button class="indicator-item" data-ind="sma">📈 Simple Moving Average</button>
+                <button class="indicator-item" data-ind="rsi">📊 RSI (14)</button>
+                <button class="indicator-item" data-ind="bb">📉 Bollinger Bands</button>
+            </div>
+            <button id="closeIndicatorModal" style="background:transparent; border:1px solid rgba(255,255,255,.2); margin-top:1rem;">Cancel</button>
+        </div>
+    </div>
+    <div class="context-menu" id="contextMenu">
+        <div class="context-item" data-action="trade">💹 Place Trade Here</div>
+        <div class="context-item" data-action="alert">🔔 Set Alert</div>
+        <div class="context-item" data-action="draw">✏️ Draw</div>
+    </div>
+
+    <div class="toast-wrapper" id="toastWrapper"></div>
+
+    <footer>
+        <div class="container"> © 2026 Ranteey Forex — Discipline Beats Greed. </div>
+    </footer>
+</body>
+  </html>
